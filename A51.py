@@ -14,7 +14,7 @@ class A51():
         return 1 if self.LFSR1[8] + self.LFSR2[10] + self.LFSR3[10] >= 2 else 0
 
     def clock(self,clk):
-        
+
         x_o_r = []
         keystream = []
 
@@ -49,11 +49,10 @@ class A51():
             x_o_r.clear()
 
 
-t = ''.join(format(ord(i),'b') for i in "Hello world")
-print(t[:19])
-print(t[19:41])
-print(t[41:64])
-
 test = A51()
-# test.clock(70)
+# test.clock(20)
 
+text_to_binary = ''.join(format(ord(i),'b') for i in "Hello world")
+print(text_to_binary[:19])
+print(text_to_binary[19:41])
+print(text_to_binary[41:64])
